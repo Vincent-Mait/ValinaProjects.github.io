@@ -33,27 +33,35 @@ Game.mainLoop = function () {
 
 
 Game.draw = function () {
-
+    Game.drawRect();
+    Game.drawText();
+};
+Game.drawRect = function () {
     for (var i = 0; i < fruits.length; i++) {
         var fruit = fruits[i];
         var size = fruits.length; /*allows each rectangle and text
          *  to take up only a 6th of the canvas*/
 
         var space = 166;/* This is to prevent the new rectangle
-         * from being drawn over the old by increasing the x starting 
+         * 
+         from being drawn over the old by increasing the x starting 
          * position. This is also used for the texts
          */
         var yPos = 40;/* Used to create the max possible starting
          * positon for each rectangle in this case it's 40 because the
          * heightest quantity is 20. 20*40= 800 which is the height of
          * the canvas */
-
-//Rectangles
         Game.canvasContext.fillStyle = fruit.color;
         Game.canvasContext.fillRect(i * space,
-        Game.canvas.height - (fruit.quantity * yPos), Game.canvas.width / size, Game.canvas.height);
+                Game.canvas.height - (fruit.quantity * yPos), Game.canvas.width / size, Game.canvas.height);
 
-// Text Style
+    }
+};
+Game.drawText = function () {
+    for (var i = 0; i < fruits.length; i++) {
+        var fruit = fruits[i];
+        var size = fruits.length;
+        var space = 166;
         Game.canvasContext.fillStyle = 'black';
         Game.canvasContext.font = 'bold 20px Arial';
 //Numbers text
