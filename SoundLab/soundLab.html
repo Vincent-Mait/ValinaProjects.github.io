@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8">
+<title>Sound Machine</title>
+
+<style>
+
+body{background: url(music-wallpaper.jpg);}
+h1{background: #FFD700;
+color: 000000;
+text-align: center;}
+
+.box{
+  background-color: #D3D3D3;
+  width: 900px;
+  border: 15px outset blue;
+  padding: 50px;
+  margin: auto;
+}
+.rock{
+ border: 10px outset red;
+  background-color: lightblue;
+width: 300px;
+margin: auto;
+}
+.rap{
+ border: 10px outset red;
+  background-color: lightblue;
+width: 300px;
+margin: auto;
+}
+.edm{
+ border: 10px outset orange;
+  background-color: lightblue;
+width: 300px;
+margin: auto;
+}
+.jazz{
+ border: 10px outset yellow;
+  background-color: lightblue;
+width: 300px;
+margin: auto;
+}
+.classic{
+ border: 10px outset green;
+  background-color: lightblue;
+width: 400px;
+margin: auto;
+}
+</style>
+
+</head>
+<body>
+
+<audio id="rockAudio">
+  <source src="sounds/rock-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="rapAudio">
+  <source src="sounds/rap-beat.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="edmAudio">
+  <source src="sounds/electro-edm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="jazzAudio">
+  <source src="sounds/jazz-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="classicalRockAudio">
+  <source src="sounds/classical-rock.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<h1>Sound Machine</h1>
+
+<div class="box">
+<div class="rock">
+<button onclick="playRock()" type="button">Play Rock music</button>
+<button onclick="pauseRock()" type="button">Pause Rock music Audio</button>
+ </div>
+<div class="rap">
+<button onclick="playRap()" type="button">Play Rap beat</button>
+<button onclick="pauseRap()" type="button">Pause Rap beat</button> 
+</div>
+<div class="edm">
+<button onclick="playEdm()" type="button">Play Edm music</button>
+<button onclick="pauseEdm()" type="button">Pause Edm music</button> 
+</div>
+<div class="jazz">
+<button onclick="playJazz()" type="button">Play Jazz music</button>
+<button onclick="pauseJazz()" type="button">Pause Jazz music</button> 
+</div>
+<div class="classic">
+<button onclick="playClassic()" type="button">Play Classical Rock music</button>
+<button onclick="pauseClassic()" type="button">Pause Classical Rock music</button> 
+</div>
+</div>
+<script>
+var rock = document.getElementById("rockAudio"); 
+
+function playRock() { 
+  rock.play(); 
+} 
+
+function pauseRock() { 
+  rock.pause(); 
+} 
+
+var rap = document.getElementById("rapAudio"); 
+
+function playRap() { 
+  rap.play(); 
+} 
+
+function pauseRap() { 
+  rap.pause(); 
+} 
+
+var edm = document.getElementById("edmAudio"); 
+
+function playEdm() { 
+  edm.play(); 
+} 
+
+function pauseEdm() { 
+  edm.pause(); 
+} 
+
+var jazz = document.getElementById("jazzAudio"); 
+
+function playJazz() { 
+  jazz.play(); 
+} 
+
+function pauseJazz() { 
+  jazz.pause(); 
+} 
+var classic = document.getElementById("classicalRockAudio"); 
+
+function playClassic() { 
+  classic.play(); 
+} 
+
+function pauseClassic() { 
+  classic.pause(); 
+} 
+</script>
+
+</body>
+</html>
