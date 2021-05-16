@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Earnings</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<style>
+body{background: url(images/background.jpg);}
+
+h1{background: #87CEEB;color: 000000;}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+</head>
+<body>
+
+ 		<h1>Company earnings<h1>
+		<img src="images/disney-money.jpg" alt="money" width="1000" height="1200">
+            	<div style="width: 45%; float: right">
+                	<canvas id="pie-chart"></canvas>
+           	 </div>
+
+<script>
+new Chart(document.getElementById("pie-chart"), {
+    type: 'pie',
+    data: {
+      labels: ["Media networks", "Parks", "Studio entertainment", "Direct to consumer & international"],
+      datasets: [{
+        label: "Disney revenue breakdown(billons of U.S. dollars)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+        data: [28.39,16.5,9.64,16.97]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: ['Disney revenue breakdown(billons of U.S. dollars) as of March 2021', ' Created by Valina Maitland']
+      }
+    }
+});
+</script>
+<div class="link">
+<a href="resume.html">Home</a>
+</div>
+</body>
+</html>
